@@ -25,9 +25,7 @@ def gameplay
     game2 = Question.new
     game2.play(@player2)
 
-    if @player1.dead? || @player2.dead?
-      puts "it's a tie!"
-    elsif @player1.dead?
+    if @player1.dead?
       puts "GAME OVER!".red
       puts "#{@player2.name} wins with #{@player2.points} points!".yellow
     elsif @player2.dead?
